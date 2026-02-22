@@ -521,6 +521,41 @@
                 </div>
               </section>
 
+              {/* Section 6: Use Cases Library (Moved Up) */}
+              <section id="projects" className="py-24 bg-[#F6F8FB]">
+                <div className="container mx-auto px-4 max-w-6xl">
+                  <SectionTitle 
+                    title="איך נראית הטמעה מוצלחת?" 
+                    subtitle="הנה הצצה קטנה לכיוונים עסקיים שאנו בוחנים ומשלבים בארגונים מובילים באופן יומיומי."
+                  />
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[
+                      { title: "הנהלה ומטה (C-Level)", cases: ["ייעול אוטומטי של סיכומי ישיבות הנהלה ארוכות והפקת משימות.", "סיוע בגיבוש טיוטות ראשוניות מקיפות למסמכי מדיניות ותכנון אסטרטגי."] },
+                      { title: "שיווק, מכירות ופיתוח", cases: ["תמיכה מהירה ביצירת תוכן, עזרים, ותוצרי שיווק בסטנדרט ארגוני אחיד.", "מחקר מתחרים, שוק וניתוח מגמות בזמן אמת לצורך קבלת החלטות מהירות."] },
+                      { title: "תפעול, מערכות וכספים", cases: ["ניתוח מהיר של מפרטים טכניים מורכבים והשוואות ספקים ונתונים פיננסיים.", "סיוע בסטנדרטיזציה קלה של תיעוד תהליכים ונהלי עבודה פנימיים."] }
+                    ].map((dept, i) => (
+                      <FadeIn key={i} delay={i * 100} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover transition-colors">
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-[#0F5B9A] font-bold shrink-0">
+                            <FileText className="w-6 h-6" />
+                          </div>
+                          <h3 className="font-bold text-xl text-[#0B1F3B]">{dept.title}</h3>
+                        </div>
+                        <ul className="space-y-4">
+                          {dept.cases.map((c, j) => (
+                            <li key={j} className="text-gray-600 text-base flex gap-3 items-start">
+                              <span className="text-[#14B8A6] mt-1 shrink-0">•</span> 
+                              <span>{c}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </FadeIn>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
               {/* NEW SECTION: Products & Services (Hormozi Style) */}
               <section id="products" className="py-24 bg-[#0B1F3B] text-white">
                 <div className="container mx-auto px-4 max-w-6xl">
@@ -704,41 +739,6 @@
                           <h3 className="font-bold text-xl mb-3 text-[#0B1F3B]">{item.title}</h3>
                           <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                         </div>
-                      </FadeIn>
-                    ))}
-                  </div>
-                </div>
-              </section>
-
-              {/* Section 6: Use Cases Library */}
-              <section id="projects" className="py-24 bg-white">
-                <div className="container mx-auto px-4 max-w-6xl">
-                  <SectionTitle 
-                    title="איך נראית הטמעה מוצלחת?" 
-                    subtitle="הנה הצצה קטנה לכיוונים עסקיים שאנו בוחנים ומשלבים בארגונים מובילים באופן יומיומי."
-                  />
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {[
-                      { title: "הנהלה ומטה (C-Level)", cases: ["ייעול אוטומטי של סיכומי ישיבות הנהלה ארוכות והפקת משימות.", "סיוע בגיבוש טיוטות ראשוניות מקיפות למסמכי מדיניות ותכנון אסטרטגי."] },
-                      { title: "שיווק, מכירות ופיתוח", cases: ["תמיכה מהירה ביצירת תוכן, עזרים, ותוצרי שיווק בסטנדרט ארגוני אחיד.", "מחקר מתחרים, שוק וניתוח מגמות בזמן אמת לצורך קבלת החלטות מהירות."] },
-                      { title: "תפעול, מערכות וכספים", cases: ["ניתוח מהיר של מפרטים טכניים מורכבים והשוואות ספקים ונתונים פיננסיים.", "סיוע בסטנדרטיזציה קלה של תיעוד תהליכים ונהלי עבודה פנימיים."] }
-                    ].map((dept, i) => (
-                      <FadeIn key={i} delay={i * 100} className="bg-[#F6F8FB] p-8 rounded-xl border border-gray-100 card-hover transition-colors">
-                        <div className="flex items-center gap-4 mb-5">
-                          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-[#0F5B9A] font-bold shrink-0">
-                            <FileText className="w-6 h-6" />
-                          </div>
-                          <h3 className="font-bold text-xl text-[#0B1F3B]">{dept.title}</h3>
-                        </div>
-                        <ul className="space-y-4">
-                          {dept.cases.map((c, j) => (
-                            <li key={j} className="text-gray-600 text-base flex gap-3 items-start">
-                              <span className="text-[#14B8A6] mt-1 shrink-0">•</span> 
-                              <span>{c}</span>
-                            </li>
-                          ))}
-                        </ul>
                       </FadeIn>
                     ))}
                   </div>
