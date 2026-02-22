@@ -475,12 +475,17 @@
                           </li>
                         </ul>
                       </div>
-                      <button 
-                        onClick={() => handleCalendarClick()}
-                        className="w-full bg-[#F6F8FB] hover:bg-[#0B1F3B] text-[#0B1F3B] hover:text-white font-bold py-3.5 px-4 rounded-lg transition-colors border border-gray-200 hover:border-[#0B1F3B] flex justify-center items-center gap-2"
-                      >
-                        <Calendar className="w-4 h-4"/> תיאום פגישה לבחינת סדנה
-                      </button>
+                      <div className="mt-auto">
+                        <button 
+                          onClick={() => handleCalendarClick()}
+                          className="w-full bg-[#F6F8FB] hover:bg-[#0B1F3B] text-[#0B1F3B] hover:text-white font-bold py-3.5 px-4 rounded-lg transition-colors border border-gray-200 hover:border-[#0B1F3B] flex justify-center items-center gap-2"
+                        >
+                          <Calendar className="w-4 h-4"/> תיאום פגישה לבחינת סדנה
+                        </button>
+                        <button onClick={() => handleWhatsAppClick('היי טל, אשמח לשמוע פרטים על בניית סדנה פרקטית ומותאמת לארגון שלי.')} className="w-full mt-4 text-sm text-gray-500 hover:text-[#14B8A6] transition-colors flex justify-center items-center gap-1.5 font-medium">
+                          <MessageCircle className="w-4 h-4" /> או פניה מהירה בוואטסאפ
+                        </button>
+                      </div>
                     </FadeIn>
 
                     {/* Product 2: End-to-End Implementation (The "Main" offer) */}
@@ -514,12 +519,17 @@
                           </li>
                         </ul>
                       </div>
-                      <button 
-                        onClick={() => handleCalendarClick()}
-                        className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold py-4 px-4 rounded-lg transition-all shadow-[0_0_15px_rgba(245,158,11,0.3)] hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] relative z-10 flex justify-center items-center gap-2 text-lg"
-                      >
-                        <Calendar className="w-5 h-5"/> לתיאום פגישת ייעוץ לתהליך
-                      </button>
+                      <div className="mt-auto relative z-10">
+                        <button 
+                          onClick={() => handleCalendarClick()}
+                          className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold py-4 px-4 rounded-lg transition-all shadow-[0_0_15px_rgba(245,158,11,0.3)] hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] flex justify-center items-center gap-2 text-lg"
+                        >
+                          <Calendar className="w-5 h-5"/> לתיאום פגישת ייעוץ לתהליך
+                        </button>
+                        <button onClick={() => handleWhatsAppClick('היי טל, מעוניין לשמוע על תהליך הטמעה רוחבי לארגון שלי.')} className="w-full mt-4 text-sm text-gray-500 hover:text-[#F59E0B] transition-colors flex justify-center items-center gap-1.5 font-medium">
+                          <MessageCircle className="w-4 h-4" /> או פניה מהירה בוואטסאפ
+                        </button>
+                      </div>
                     </FadeIn>
 
                     {/* Product 3: AI Development & Agents */}
@@ -548,22 +558,30 @@
                           </li>
                         </ul>
                       </div>
-                      <button 
-                        onClick={() => handleCalendarClick()}
-                        className="w-full bg-[#F6F8FB] hover:bg-[#0B1F3B] text-[#0B1F3B] hover:text-white font-bold py-3.5 px-4 rounded-lg transition-colors border border-gray-200 hover:border-[#0B1F3B] flex justify-center items-center gap-2"
-                      >
-                        <Calendar className="w-4 h-4"/> תיאום שיחת התכנות טכנולוגית
-                      </button>
+                      <div className="mt-auto">
+                        <button 
+                          onClick={() => handleCalendarClick()}
+                          className="w-full bg-[#F6F8FB] hover:bg-[#0B1F3B] text-[#0B1F3B] hover:text-white font-bold py-3.5 px-4 rounded-lg transition-colors border border-gray-200 hover:border-[#0B1F3B] flex justify-center items-center gap-2"
+                        >
+                          <Calendar className="w-4 h-4"/> תיאום שיחת התכנות טכנולוגית
+                        </button>
+                        <button onClick={() => handleWhatsAppClick('היי טל, מעוניין בבדיקת היתכנות לפיתוח אוטומציות וסוכני AI בארגון.')} className="w-full mt-4 text-sm text-gray-500 hover:text-[#0F5B9A] transition-colors flex justify-center items-center gap-1.5 font-medium">
+                          <MessageCircle className="w-4 h-4" /> או פניה מהירה בוואטסאפ
+                        </button>
+                      </div>
                     </FadeIn>
 
                   </div>
 
                   <FadeIn delay={400}>
-                    <div className="text-center pt-10 border-t border-white/10">
+                    <div className="text-center pt-10 border-t border-white/10 flex flex-col items-center">
                       <p className="text-gray-300 mb-6 text-lg font-medium">לא בטוחים איזה מסלול נכון לשלב העסקי הנוכחי שלכם?</p>
-                      <ButtonPrimary onClick={handleCalendarClick} className="mx-auto py-5 px-10 text-xl shadow-none hover:shadow-[0_0_20px_rgba(245,158,11,0.5)]">
+                      <ButtonPrimary onClick={handleCalendarClick} className="mx-auto py-5 px-10 text-xl shadow-none hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] mb-4">
                         <Calendar className="w-6 h-6"/> קבעו פגישת איפיון קצרה לבחירת הנתיב
                       </ButtonPrimary>
+                      <button onClick={() => handleWhatsAppClick('היי טל, אשמח להתייעץ איזו מפת דרכים מתאימה לארגון שלנו כרגע.')} className="text-gray-400 hover:text-[#14B8A6] transition-colors flex justify-center items-center gap-2 font-medium text-base mt-2">
+                        <MessageCircle className="w-5 h-5" /> או התייעצו איתנו קודם בוואטסאפ
+                      </button>
                     </div>
                   </FadeIn>
                 </div>
@@ -777,9 +795,19 @@
                     <button onClick={() => handleNavClick('products')} className="text-[#0B1F3B] font-bold hover:text-[#14B8A6] transition-colors">מסלולי פעילות</button>
                     <button onClick={() => handleNavClick('projects')} className="text-gray-600 hover:text-[#14B8A6] font-medium transition-colors">יישומים בארגון</button>
                     <button onClick={() => handleNavClick('governance')} className="text-gray-600 hover:text-[#14B8A6] font-medium transition-colors">אבטחת מידע (FAQ)</button>
-                    <ButtonPrimary onClick={handleCalendarClick} className="py-2.5 px-6 text-sm">
-                      <Calendar className="w-4 h-4"/> תיאום פגישה ביומן
-                    </ButtonPrimary>
+                    
+                    <div className="flex items-center gap-2 mr-2">
+                      <ButtonPrimary onClick={handleCalendarClick} className="py-2.5 px-6 text-sm">
+                        <Calendar className="w-4 h-4"/> תיאום פגישה ביומן
+                      </ButtonPrimary>
+                      <button 
+                        onClick={() => handleWhatsAppClick()} 
+                        className="flex items-center justify-center w-11 h-11 bg-teal-50 text-[#14B8A6] hover:bg-[#14B8A6] hover:text-white rounded-lg transition-colors border border-teal-100 shadow-sm" 
+                        title="שלחו הודעת וואטסאפ"
+                      >
+                        <MessageCircle className="w-5 h-5"/>
+                      </button>
+                    </div>
                   </nav>
 
                   {/* Mobile Menu Toggle */}
@@ -796,12 +824,14 @@
                     <button onClick={() => handleNavClick('products')} className="text-right text-gray-800 font-bold p-2 hover:bg-gray-50 rounded text-lg">מסלולי פעילות</button>
                     <button onClick={() => handleNavClick('projects')} className="text-right text-gray-800 font-medium p-2 hover:bg-gray-50 rounded text-lg">יישומים מרכזיים בארגון</button>
                     <button onClick={() => handleNavClick('governance')} className="text-right text-gray-800 font-medium p-2 hover:bg-gray-50 rounded text-lg">אבטחת מידע וניהול סיכונים</button>
-                    <ButtonPrimary onClick={handleCalendarClick} className="w-full mt-4 text-lg py-4">
-                      <Calendar className="w-5 h-5"/> תיאום פגישה ביומן
-                    </ButtonPrimary>
-                    <button onClick={() => handleWhatsAppClick()} className="text-[#14B8A6] font-medium mt-2 flex justify-center items-center gap-2">
-                      <MessageCircle className="w-5 h-5"/> או שלחו לנו וואטסאפ
-                    </button>
+                    <div className="flex flex-col gap-3 mt-2">
+                      <ButtonPrimary onClick={handleCalendarClick} className="w-full text-lg py-4">
+                        <Calendar className="w-5 h-5"/> תיאום פגישה ביומן
+                      </ButtonPrimary>
+                      <button onClick={() => handleWhatsAppClick()} className="w-full bg-teal-50 text-[#14B8A6] font-medium py-3 rounded-lg border border-teal-100 flex justify-center items-center gap-2">
+                        <MessageCircle className="w-5 h-5"/> או שלחו לנו וואטסאפ
+                      </button>
+                    </div>
                   </div>
                 )}
               </header>
